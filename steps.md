@@ -41,3 +41,13 @@
     begin by building up what this appplication is all about: sending
     invoices. So I think it's safe to rename the test to soemthing
     like "sends an invoice." We can work backward from there.
+  * Now that we've decided what the test should be let's look at
+    what's required to make it pass. An invoice requires an amount,
+    someone who should pay it, who it's from, and what it's for.
+    Naturally the invoice should be delivered via email. Note there is
+    nothing about databases or anything else in that description. It's
+    simply enough to get off the ground. We already know that the
+    general application structure. There is a delivery mechanism,
+    forms, and use cases. None of these objects exist yet. So with
+    that in mind, let's start by writing tests that will flesh out the
+    objects required to make the tests pass.

@@ -196,3 +196,5 @@
     the assertion to pass if written correctly. So I use a canary
     value like `:foo` or change `assert` to `refute` to make sure the
     test is failing before making it pass.
+  * Easy-peasy, just rewrite the assertion and **everything is
+    passing.** \o/ \o/ \o/

@@ -27,6 +27,6 @@ class AcceptanceTestCase < MiniTest::Unit::TestCase
 
     refute_empty mailbox
     mail = mailbox.first
-    assert_equal :foo, mail.to
+    assert_equal ['client@example.com'], mail.to
   end
 end

@@ -18,5 +18,7 @@ class SendInvoiceTest < MiniTest::Unit::TestCase
     assert_equal 200, last_response.status
 
     refute_empty mailbox
+    mail = mailbox.first
+    assert_equal ['client@example.com'], mail.to
   end
 end

@@ -14,9 +14,9 @@ class SendInvoiceTest < MiniTest::Unit::TestCase
     mail = use_case.run!
 
     assert_equal "New invoice from #{form.name}", mail.subject
-    assert_equal form.email, mail.to
-    assert_includes mail.body, form.description
-    assert_includes mail.body, form.amount
+    assert_equal [form.email], mail.to
+    assert_includes mail.body.to_s, form.description
+    assert_includes mail.body.to_s, form.amount.to_s
 
     assert_includes Mail::TestMailer.deliveries, mail
   end

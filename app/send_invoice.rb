@@ -4,7 +4,11 @@ class SendInvoice
   end
 
   def run!
-    Mail.new
+    mail = Mail.new
+    mail.subject = "New invoice from #{form.name}"
+    mail.to = form.email
+    mail.body = "You have a invoice for #{form.amount} about #{form.description}"
+    mail
   end
 
   private

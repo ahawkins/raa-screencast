@@ -121,4 +121,11 @@
     else. It's enough to punt on the `run!` method again to get to
     this point. Let's stub it to return a new mail object to get to
     the failing assertion.
+  * Time to get down and dirty writing some code. There are four
+    failing assertions in front of us. They are related to the email's
+    content. There is nothing complicated to do here. All we need to
+    do is assign the right things on the email. There is some tests to
+    rewrite here because we didn't understand the mail interface here.
+    That's no problem since we have the tests to guide us. It's easy
+    to get past these assertions and make it to the delivery one.
 

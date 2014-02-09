@@ -22,6 +22,6 @@ class SendInvoiceFormTest < MiniTest::Unit::TestCase
   def test_has_description_accessor
     form = SendInvoiceForm.new
     form.description = :services_rendered
-    assert_equal 'services rendered', form.description
+    assert_equal 'services_rendered', form.description
   end
 end

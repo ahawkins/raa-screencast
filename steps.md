@@ -186,4 +186,8 @@
     correctly. When the environment is test, sintra will raise errors
     so it's easier to debug all the failures. Just dump the assignment
     into `test_helper.rb`.
+  * Now just debug the failures to make the test pass. Silly me. We
+    named things incorrectly. Perhaps we should revaluate our names
+    later. If we forget them this easily in the beginning, we'll
+    probably make the same mistake over and over again.
 

@@ -17,14 +17,14 @@ class AcceptanceTestCase < MiniTest::Unit::TestCase
 
   def test_sends_an_invoice
     post '/invoices', invoice: {
-      to: 'client@example.com',
+      name: 'Adam Hawkins',
+      email: 'client@example.com',
       description: 'Services rendered',
-      amount: 1000.0,
-      from: 'Adam Hawkins'
+      amount: 1000.0
     }
 
     assert_equal 200, last_response.status
 
-    refute_emtpy mailbox
+    refute_empty mailbox
   end
 end

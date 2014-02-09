@@ -75,3 +75,13 @@
     requires all the other files. For now let's create an `app`
     directory that contains `send_invoice_form.rb`. We'll reorganize
     this directory once we have more files.
+  * Now we have a passing test! There is more work to do on the form
+    however. The form must coerce input as well. This means we need to
+    call `to_s` or `to_f` to ensure we have the correct types to work
+    with. This is important because the form is the entry point into
+    the application. Once data makes it through the form it will never
+    be checked again. So it's ok to do some grunt work here to make
+    sure everything is ok. So it's easy to write these tests. We need
+    an object that is not the type we want and responds to `to_s` or
+    `to_f`. We can use symbols for the string tests and strings for
+    the amount tests.

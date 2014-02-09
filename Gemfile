@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'chassis', github: 'ahawkins/chassis'
 gem 'mail'
+gem 'sinatra'
 
 group :test do
   gem 'rack-test'

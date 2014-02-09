@@ -157,4 +157,12 @@
     little easier to read. `Mail::TestMailer` is referenced multiple
     times in the test. It's not entirely clear what that is though.
     Let's use an intention revealing method to make it clear.
+  * Now that we have the use case and form complete it's time to move
+    onto the next failing test. The acceptance test case is failing.
+    We have no delivery mechanism. In the previous steps we created
+    the domain objects needed to implement the route handler. Now it's
+    time to get this passing. It's time to bring in sinatra and start
+    writing a web app. I like to separate this concern into separate
+    files. Then we can define our class to get pass that pesky
+    undefined method error in the acceptance test.
 

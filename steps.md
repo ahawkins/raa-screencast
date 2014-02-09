@@ -51,3 +51,15 @@
     forms, and use cases. None of these objects exist yet. So with
     that in mind, let's start by writing tests that will flesh out the
     objects required to make the tests pass.
+  * It is ok to write a flunking test now. The point is not to get the
+    test write from the beginning, but use the tests as a guide to
+    fill in parts of the system. I perfer to use "flunk" for these
+    cases beacuse I don't know what should go in them yet, but I want
+    them to fail and not skip. This is like my TODO list.
+    We know the use case will have at least one collaborator in the
+    beginning: the form object. So the test will instantiate the form
+    object assign some values, then run the use case. So if we write
+    that in the test, we'll need to create tests for the form. This is
+    nice because it requires us to think about what data is required
+    before continuing. So let's add a reference to the form, the test
+    will fail, then we can move on with tests for the form.

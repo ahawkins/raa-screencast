@@ -153,4 +153,8 @@
     Next there there is something we can do in the form test. Every
     test declares a new form instance. We can move that up into a
     `setup` block and use an `attr_reader` instead.
+  * There's still one more thing we can do. We can make the use case a
+    little easier to read. `Mail::TestMailer` is referenced multiple
+    times in the test. It's not entirely clear what that is though.
+    Let's use an intention revealing method to make it clear.
 

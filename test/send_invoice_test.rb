@@ -1,8 +1,12 @@
 require_relative 'test_helper'
 
 class SendInvoiceTest < MiniTest::Unit::TestCase
+  def mailbox
+    Mail::TestMailer.deliveries
+  end
+
   def teardown
-    Mail::TestMailer.deliveries.clear
+    mailbox.clear
   end
 
   def test_send_the_invoices_over_email
@@ -23,6 +27,6 @@ class SendInvoiceTest < MiniTest::Unit::TestCase
     assert_includes mail.body.to_s, form.amount.to_s
     refute_empty mail.from, "The email's from address must be set"
 
-    assert_includes Mail::TestMailer.deliveries, mail
+    assert_includes mailbox, mail
   end
 end

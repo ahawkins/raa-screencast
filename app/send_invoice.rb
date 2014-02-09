@@ -3,6 +3,10 @@ class SendInvoice
     @form = form
   end
 
+  def run!
+
+  end
+
   private
   def form
     @form

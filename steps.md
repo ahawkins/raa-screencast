@@ -97,4 +97,23 @@
     **unbearable** pain. So what's next? We should turn our attention
     back to the failing use case tests. Now that we have the form we
     can instantiate it and call the use case.
+  * So now we've reached the point where we need functionality. The
+    test case is calling `run!` but the method is undefined. What goes
+    on in this method? Well all the things to be honest. Right now
+    we're only focused on sending email. This is the point where we
+    need to start looking at gems. It doesn't make sense for us to
+    implement our own email delivery thing. We need something that
+    allows different behavior per environment. Natrually we don't want
+    to send emails in the test environment, only assert that an email
+    has crossed over the boundary. We could implement this all
+    ourselves, but I think that would require writing a bunch of
+    classes that would undoubtably be replced with a library. I don't
+    like to introduce gems so early in an application's development
+    but it seems this is best option. The `mail` gem is perfect for
+    us. So let's get to it by writing some failing tests. For now we
+    only need to test that generated email has been delivered. Let's
+    punt on `run!` and figure out what kind of assertions we need.
+    this keeps the test failing while working on making assertions
+    pass. For now I think it's safe enough for us to test that the
+    email contains all the information about the invoice.
 

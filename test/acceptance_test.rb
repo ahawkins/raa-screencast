@@ -16,7 +16,12 @@ class AcceptanceTestCase < MiniTest::Unit::TestCase
   end
 
   def test_sends_an_invoice
-    post '/invoices'
+    post '/invoices', invoice: {
+      to: 'client@example.com',
+      description: 'Services rendered',
+      amount: 1000.0,
+      from: 'Adam Hawkins'
+    }
 
     assert_equal 200, last_response.status
 

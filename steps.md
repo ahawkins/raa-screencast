@@ -178,4 +178,6 @@
     don't need to test what the email is since that's covered in other
     tests. We can copy the stuff we added in the last commit into this
     test case to keep things moving.
+  * Now let's move on sending the data and getting this thing to pass.
+    let's take a stab at filling this in and run the tests.
 

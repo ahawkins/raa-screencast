@@ -17,6 +17,7 @@ class SendInvoiceTest < MiniTest::Unit::TestCase
     assert_equal [form.email], mail.to
     assert_includes mail.body.to_s, form.description
     assert_includes mail.body.to_s, form.amount.to_s
+    refute_empty mail.from, "The email's from address must be set"
 
     assert_includes Mail::TestMailer.deliveries, mail
   end

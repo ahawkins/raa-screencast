@@ -131,4 +131,14 @@
   * Now for the last hurrah of this test. All we need to do is
     deliver the email. Just use mail's interface for that and we're
     off to the races.
+  * Oh crap! we have two problems. First off, this test is trying to
+    to use SMTP. We definitely don't want that at all! We need to
+    configure mail to use its test mailer. Secondly the exception says
+    we haven't sent a from address. It's right! How did we forget
+    that? We probably need to do add something to the form to handle
+    this, but let's punt on that for now to keep working inside this
+    test. Let's just stub the `from` address to be from our
+    application's domain. Add a failing assertion above the final one
+    to as a regression test. This ensures we never get this bug again.
+    Once we do that we can move onto configuring the delivery system.
 

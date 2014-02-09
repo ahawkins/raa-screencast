@@ -190,4 +190,9 @@
     named things incorrectly. Perhaps we should revaluate our names
     later. If we forget them this easily in the beginning, we'll
     probably make the same mistake over and over again.
-
+  * Now let's add a more useful assertion. Let's test that the client
+    actually receives the email. Then we can move onto refactoring the
+    code. In these cases I like to add a canary assertion. I expect
+    the assertion to pass if written correctly. So I use a canary
+    value like `:foo` or change `assert` to `refute` to make sure the
+    test is failing before making it pass.

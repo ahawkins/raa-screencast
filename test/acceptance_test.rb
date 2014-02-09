@@ -26,5 +26,7 @@ class AcceptanceTestCase < MiniTest::Unit::TestCase
     assert_equal 200, last_response.status
 
     refute_empty mailbox
+    mail = mailbox.first
+    assert_equal :foo, mail.to
   end
 end

@@ -4,7 +4,7 @@ class SendInvoice
   end
 
   def run!
-
+    Mail.new
   end
 
   private

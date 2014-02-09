@@ -116,4 +116,9 @@
     this keeps the test failing while working on making assertions
     pass. For now I think it's safe enough for us to test that the
     email contains all the information about the invoice.
+  * Now we can implement a bit of functionality to get the next
+    failing assertion. We work towards failing assertions and nothing
+    else. It's enough to punt on the `run!` method again to get to
+    this point. Let's stub it to return a new mail object to get to
+    the failing assertion.
 

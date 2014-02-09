@@ -1,6 +1,12 @@
 class SendInvoiceForm
   attr_reader :name, :email, :amount, :description
 
+  def initialize(attributes = { })
+    attributes.each_pair do |key, value|
+      send "#{key}=", value
+    end
+  end
+
   def name=(value)
     @name = value.to_s
   end

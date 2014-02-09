@@ -165,4 +165,17 @@
     writing a web app. I like to separate this concern into separate
     files. Then we can define our class to get pass that pesky
     undefined method error in the acceptance test.
+  * There is one failing assertion left to tackle. The assertion tests
+    the HTTP response code. We get a 404. This is beacuse we haven't
+    actually implemented the route. Implementing the route is straight
+    forward. We already have the classes to make this work. We simply
+    need to instantiate them and use them. It's unclear what the
+    response body should contain though. Right now we don't have
+    enough information to complete this. So let's punt on that as just
+    test that the response comes back ok. We also need some other
+    assertion to cover things are working correctly. I think it's
+    enough to test that the specified email receives an email. We
+    don't need to test what the email is since that's covered in other
+    tests. We can copy the stuff we added in the last commit into this
+    test case to keep things moving.
 

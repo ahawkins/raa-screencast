@@ -63,3 +63,10 @@
     nice because it requires us to think about what data is required
     before continuing. So let's add a reference to the form, the test
     will fail, then we can move on with tests for the form.
+  * Now that we have a flunking test we need to think about what
+    should go in there. Think back to what the form object it supposed
+    to do. It's just is to santizie and make user input the correct
+    type. So now we think of the data required. We know that we'll
+    need a name, email, amount, and description. Amount is a number
+    and the rest are string primitives. So the first step is to test
+    that these values can be assigned and read back.

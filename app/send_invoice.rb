@@ -5,6 +5,9 @@ class SendInvoice
 
   def run!
     mail = Mail.new
+
+    mail.from = 'invoices@invoicer.com'
+
     mail.subject = "New invoice from #{form.name}"
     mail.to = form.email
     mail.body = "You have a invoice for #{form.amount} about #{form.description}"

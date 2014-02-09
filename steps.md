@@ -141,4 +141,7 @@
     application's domain. Add a failing assertion above the final one
     to as a regression test. This ensures we never get this bug again.
     Once we do that we can move onto configuring the delivery system.
+  * Configuring mail is easy. We jsut need to drop a snippet in
+    `test_helper.rb`. Now the test passes, but for some reason the
+    tests have slowed down **significantly.**
 

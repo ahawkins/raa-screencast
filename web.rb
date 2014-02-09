@@ -1,8 +1,6 @@
 require 'sinatra'
 
 class WebService < Sinatra::Base
-  set :raise_errors
-
   post '/invoices' do
     form = SendInvoiceForm.new
     form.to = params['invoice']['to']

@@ -180,4 +180,10 @@
     test case to keep things moving.
   * Now let's move on sending the data and getting this thing to pass.
     let's take a stab at filling this in and run the tests.
+  * Crap! What the hell is going on? Where is this 500 error coming
+    from? Sinatra can tell us, but we haven't told it so. Sinatra
+    relies on the `RACK_ENV` variable to configure test mode
+    correctly. When the environment is test, sintra will raise errors
+    so it's easier to debug all the failures. Just dump the assignment
+    into `test_helper.rb`.
 

@@ -9,6 +9,10 @@ class SendInvoice
     mail.to = form.email
     mail.body = "You have a invoice for #{form.amount} about #{form.description}"
     mail
+
+    mail.deliver!
+
+    mail
   end
 
   private

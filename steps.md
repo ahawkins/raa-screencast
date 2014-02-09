@@ -128,4 +128,7 @@
     rewrite here because we didn't understand the mail interface here.
     That's no problem since we have the tests to guide us. It's easy
     to get past these assertions and make it to the delivery one.
+  * Now for the last hurrah of this test. All we need to do is
+    deliver the email. Just use mail's interface for that and we're
+    off to the races.
 

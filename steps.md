@@ -85,3 +85,16 @@
     an object that is not the type we want and responds to `to_s` or
     `to_f`. We can use symbols for the string tests and strings for
     the amount tests.
+  * Now that tests pass there is something unsetteling about that
+    code. It's obviously sub optimal because it's very boiler plate.
+    There will come a time when we have pain maintaining these things.
+    Right now it's fine. There is a prying thought in the back of our
+    mind: we should be using a libary for this. In fact you've
+    probably already picked on out and are itching to refactor this
+    code. But check yourself. It's not important right now. What would
+    adding a library do? Remove a few lines of code? We have bigger
+    fish to fry. We can come back to this when we've reached
+    **unbearable** pain. So what's next? We should turn our attention
+    back to the failing use case tests. Now that we have the form we
+    can instantiate it and call the use case.
+

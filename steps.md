@@ -144,4 +144,13 @@
   * Configuring mail is easy. We jsut need to drop a snippet in
     `test_helper.rb`. Now the test passes, but for some reason the
     tests have slowed down **significantly.**
+  * Wow! Now we've completed our first red-green cycle. Now it's time
+    to refactor the code a bit. There's not so much to do, but there
+    are a few things to take care. First off the use case test has a
+    problem. We haven't done anything to clean up the state from the
+    test. We haven't cleared out any possible deliveries. This is an
+    easy fix. We simply need to call `clear` in `setup` or `teardown`.
+    Next there there is something we can do in the form test. Every
+    test declares a new form instance. We can move that up into a
+    `setup` block and use an `attr_reader` instead.
 

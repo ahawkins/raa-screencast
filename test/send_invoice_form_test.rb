@@ -1,8 +1,13 @@
 require_relative 'test_helper'
 
 class SendInvoiceFormTest < MiniTest::Unit::TestCase
+  attr_reader :form
+
+  def setup
+    @form = SendInvoiceForm.new
+  end
+
   def test_assigns_names_as_strings
-    form = SendInvoiceForm.new
     form.name = :adam
     assert_equal 'adam', form.name
   end

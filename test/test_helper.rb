@@ -10,3 +10,13 @@ require "#{root}/app"
 Mail.defaults do
   delivery_method :test
 end
+
+class MiniTest::Unit::TestCase
+  def mailbox
+    Mail::TestMailer.deliveries
+  end
+
+  def teardown
+    mailbox.clear
+  end
+end

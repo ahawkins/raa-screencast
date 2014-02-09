@@ -3,14 +3,6 @@ require_relative 'test_helper'
 class SendInvoiceTest < MiniTest::Unit::TestCase
   include Rack::Test::Methods
 
-  def mailbox
-    Mail::TestMailer.deliveries
-  end
-
-  def teardown
-    mailbox.clear
-  end
-
   def app
     WebService
   end

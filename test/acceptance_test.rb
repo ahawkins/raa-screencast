@@ -7,14 +7,6 @@ class AcceptanceTestCase < MiniTest::Unit::TestCase
     WebService
   end
 
-  def mailbox
-    Mail::TestMailer.deliveries
-  end
-
-  def teardown
-    mailbox.clear
-  end
-
   def test_sends_an_invoice
     post '/invoices', invoice: {
       name: 'Adam Hawkins',

@@ -7,6 +7,11 @@ class SendInvoiceFormTest < MiniTest::Unit::TestCase
     @form = SendInvoiceForm.new
   end
 
+  def test_can_be_initialized_with_a_hash
+    form = SendInvoiceForm.new name: 'Adam'
+    assert_equal 'Adam', form.name
+  end
+
   def test_assigns_names_as_strings
     form.name = :adam
     assert_equal 'adam', form.name

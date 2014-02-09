@@ -11,3 +11,13 @@ require "#{root}/app.rb"
 Mail.defaults do
   delivery_method :test
 end
+
+class MiniTest::Unit::TestCase
+  def mailbox
+    Mail::TestMailer.deliveries
+  end
+
+  def teardown
+    mailbox.clear
+  end
+end

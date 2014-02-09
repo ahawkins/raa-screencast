@@ -198,3 +198,21 @@
     test is failing before making it pass.
   * Easy-peasy, just rewrite the assertion and **everything is
     passing.** \o/ \o/ \o/
+  * Great, now that we have a working test suite it's time for us to
+    refactor the code. There is something immediately wrong with the
+    route handler. Those lines of assignment code are sick. We can
+    obviously refactor those into something much nicer. This is a good
+    case for "mass assignment." Simply dump a hash into into
+    `initialize` and assign attributes based on key value. Let's
+    update the form's `initialize` methods and tests as well to use
+    it. Next let's refactor that copy & paste we did earlier. Let's
+    just move those methods into `MiniTest::Unit::TestCase` for now.
+    Reopen the class in test helper and insert the methods. Beware,
+    we need to call `super` if we ever define `teardown` in another
+    tests. Congratulations! We have our first basic functionality.
+    It's not much but it's a start. Remember this is an iterative
+    process. We tackle small things and continue to build
+    functionality in small chunks. There are some notable things
+    missing. We've only covered the happy path and we haven't figured
+    out what to actually return in the response. This was a good start
+    but we still have a lot of work todo.

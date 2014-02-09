@@ -70,3 +70,8 @@
     need a name, email, amount, and description. Amount is a number
     and the rest are string primitives. So the first step is to test
     that these values can be assigned and read back.
+  * Time to make the tests pass. Obviously we need to declare these
+    classes somewhere. I like to have one file called `app`. It
+    requires all the other files. For now let's create an `app`
+    directory that contains `send_invoice_form.rb`. We'll reorganize
+    this directory once we have more files.
